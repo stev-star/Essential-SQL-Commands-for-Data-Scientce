@@ -28,9 +28,9 @@ FROM students;
   
 2.	`WHERE`
 
-This command is used to filter data based on specified condition. The WHERE clause is used with the SELECT to 
+This command is used to filter data based on specified condition. The WHERE clause is used with 
 
-retrieve specified data that meets the specified criteria.
+the SELECT to retrieve specified data that meets the specified criteria.
 
 Syntax:
 ```SQL
@@ -112,33 +112,36 @@ ON o.customer_id = c.customer_id;
 SQL Server supports many kinds of different joins including INNER JOIN, SELF JOIN, CROSS JOIN, and OUTER JOIN. In fact, each join type defines the way two tables are related in a query. OUTER JOINS can further be divided into LEFT OUTER JOINS, RIGHT OUTER JOINS, and FULL OUTER JOINS.
 
 - `INNER JOIN` creates a result table by combining rows that have matching values in two or more tables.
-
+```SQL
 SELECT *
 FROM table1
 INNER JOIN table2
 ON table1.column = table2.column;
+```
 
 - `LEFT JOIN` includes in a result table unmatched rows from the table that is specified before the LEFT OUTER JOIN clause.
-
+```SQL
 SELECT *
 FROM table1
 LEFT JOIN table2
 ON table1.column = table2.column;
+```
 
 - `RIGHT JOIN` creates a result table and includes into it all the records from the right table and only matching rows from the 
 
 left table.
-
+```SQL
 SELECT *
 FROM table1
 RIGHT JOIN table2
 ON table1.column = table2.column;
-
+```
 - `SELF JOIN` A self join is a join operation where a table is joined with itself. In other words, it is a way to combine rows 
 
 from the same table based on a related column.
 
 - `CROSS JOIN` creates a result table containing paired combination of each row of the first table with each row of the second table.
+
 ```SQL
 SELECT *
 FROM table1
