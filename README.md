@@ -1,7 +1,5 @@
 # Essential-SQL-Commands-for-Data-Scientce
 
-![alt text]( https://images.app.goo.gl/wA8pbJQFYY2zdYJ56) 
-
 SQL (Structured Query Language) is a programming language used to manage and manipulate relational 
 
 database. 
