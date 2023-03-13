@@ -137,17 +137,32 @@ RIGHT JOIN table2
 ON table1.column = table2.column;
 ```
 - `SELF JOIN` A self join is a join operation where a table is joined with itself. In other words, it is a way to combine rows 
+   from the same table based on a related column.
+```SQL
+SELECT e.employee_name, 
+       m.employee_name AS manager_name
+FROM employees e
+JOIN employees m 
+ON e.manager_id = m.employee_id;
+```
+For example, consider a table called "employees" that has columns for "employee_id", "employee_name", and "manager_id", where the "manager_id" 
+column references the "employee_id" of the employee's manager. To retrieve the names of all employees and their respective managers, you could 
+use a self join like this:
+```SQL
+SELECT e.employee_name, m.employee_name AS manager_name
+FROM employees e
+JOIN employees m ON e.manager_id = m.employee_id;
+```
 
-from the same table based on a related column.
-
-- `CROSS JOIN` creates a result table containing paired combination of each row of the first table with each row of the second table.
-
+- `CROSS JOIN` A cross join, also known as a Cartesian join, is a type of join operation in SQL where every row from one table is joined with
+ every row from another table. This means that the resulting table contains all possible combinations of rows from the two tables being joined.
 ```SQL
 SELECT *
 FROM table1
 CROSS JOIN table2;
 ```
-
+ Cross joins are not often used in practice, as they can produce very large result sets and can be computationally expensive. However, they
+ can be useful in certain situations, such as when you need to generate test data or when you want to analyze all possible combinations of data.
 
 6.	GROUP BY 
 
